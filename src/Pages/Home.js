@@ -1,6 +1,5 @@
 import React from 'react'
 import '../Style/home.css'
-import sala from '../Images/sala.jpeg'
 import Slider from '../Components/Slider'
 import profile from '../Images/profile.jpeg'
 import whaBlack from '../Images/wsBlack.png'

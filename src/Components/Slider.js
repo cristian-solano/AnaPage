@@ -48,7 +48,7 @@ const Slider = () => {
     useEffect(() => {
       startSlideShow();
       return () => stopSlideShow(); // Limpia el intervalo cuando el componente se desmonta
-    }, []);
+    }, [startSlideShow]);
   
     return (
       <div className='slider-container'>

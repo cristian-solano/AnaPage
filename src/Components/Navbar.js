@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import '../Style/navbar.css'
-import { Link } from 'react-router-dom'
 import phone from '../Images/phone.png'
 
 const Navbar = () => {
