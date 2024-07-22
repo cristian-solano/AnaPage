@@ -49,7 +49,7 @@ const Slider = () => {
 
         startSlideShow();
         return () => stopSlideShow();
-    }, []);
+    }, [startSlideShow]);
   
     return (
       <div className='slider-container'>
