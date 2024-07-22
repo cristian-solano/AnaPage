@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import '../Style/slider.css'
 import left from '../Images/left.png'
 import right from '../Images/right.png'
@@ -23,15 +23,15 @@ const Slider = () => {
       ]}
     ];
   
-    const startSlideShow = () => {
-      slideInterval.current = setInterval(() => {
-        setCurrentIndex(prevIndex => (prevIndex + 1) % slides.length);
-      }, 5000);
-    };
+    const startSlideShow = useCallback(() => {
+        slideInterval.current = setInterval(() => {
+            setCurrentIndex(prevIndex => (prevIndex + 1) % slides.length);
+        }, 5000);
+    }, [slides.length]);
   
-    const stopSlideShow = () => {
-      clearInterval(slideInterval.current);
-    };
+    const stopSlideShow = useCallback(() => {
+        clearInterval(slideInterval.current);
+    }, []);
   
     const handleNext = () => {
       stopSlideShow();
@@ -49,7 +49,7 @@ const Slider = () => {
 
         startSlideShow();
         return () => stopSlideShow();
-    }, [startSlideShow]);
+    }, [startSlideShow, stopSlideShow]);
   
     return (
       <div className='slider-container'>
