@@ -26,7 +26,7 @@ const Slider = () => {
     const startSlideShow = () => {
       slideInterval.current = setInterval(() => {
         setCurrentIndex(prevIndex => (prevIndex + 1) % slides.length);
-      }, 5000); // Cambia cada 10 segundos
+      }, 5000);
     };
   
     const stopSlideShow = () => {
@@ -50,7 +50,7 @@ const Slider = () => {
             startSlideShow();
             return () => stopSlideShow();
         }
-    }, []);
+    }, [startSlideShow]);
   
     return (
       <div className='slider-container'>
