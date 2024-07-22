@@ -46,9 +46,11 @@ const Slider = () => {
     };
   
     useEffect(() => {
-      startSlideShow();
-      return () => stopSlideShow();
-    }, [startSlideShow, stopSlideShow]);
+        if(startSlideShow){
+            startSlideShow();
+            return () => stopSlideShow();
+        }
+    }, []);
   
     return (
       <div className='slider-container'>
