@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import '../Style/navbar.css'
 import phone from '../Images/phone.png'
+import rec from '../Images/reconstruyendo.png'
 
 const Navbar = () => {
 
@@ -9,7 +10,7 @@ const Navbar = () => {
 
     const handleScroll = () => {
         const offset = window.scrollY;
-        if (offset > 50) {  
+        if (offset > 30) {  
             setScrolled(true);
         } else {
             setScrolled(false);
@@ -33,7 +34,7 @@ const Navbar = () => {
   return (
     <div className={navbarClasses.join(' ')}>
         <a href="#home" className='navbar-content-name'>
-            <h3>Psicología Clínica</h3>
+            <img src={rec} alt="reconstruyendo"/>
         </a>
         <div className='navbar-content-items'>
             <a href="#about">
