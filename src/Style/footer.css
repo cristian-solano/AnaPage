@@ -1,0 +1,36 @@
+.home-social-media {
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-social-item {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;  
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+.home-social-item a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-social-item a img {
+    width: 50px;
+    height: 50px;
+}
+
+.home-social-item:hover {
+    background-color: #3855faec;
+}
