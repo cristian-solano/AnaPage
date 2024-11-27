@@ -8,6 +8,7 @@ import psiment from '../Images/psimenteBlack.png'
 import expertise from '../Images/expertise.png'
 import college from '../Images/college.png'
 import place from '../Images/lugar.png'
+import message from '../Images/newmessge.png'
 import special from '../Images/especialidad.png'
 import { Link } from 'react-router-dom'
 import Navbar from '../Components/Navbar'
@@ -109,14 +110,15 @@ const Home = () => {
                         <img src={whaBlack} alt="whatsappblack"/>
                         <p>Enviar un mensaje por whatsapp</p>
                     </a>
+                    <Link to="/contact-form">
+                        <img src={message} alt="psicologia"/>
+                        <p>Enviar mensaje</p>
+                    </Link>
                     <a href="https://psicologiaymente.com/psicologos/2068526/ana-lucia-jaramillo-ortiz" target='blank'>
                         <img src={psiment} alt="psicologia"/>
                         <p>Directamente de Psicología y mente</p>
                     </a>
-                    <Link to="/contact-form">
-                        <img src={psiment} alt="psicologia"/>
-                        <p>Enviar mensaje</p>
-                    </Link>
+                    
                 </div>
                 <div className='home-location'>
                     <iframe title="Consultorio" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.2196787643447!2d-74.04561522496135!3d4.731864095243265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f856f411dd7bd%3A0x9b98c54e0d74414!2sCra.%2017%20%23150-52%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1721167865200!5m2!1ses!2sco" style={{border:"1px solid gray"}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
