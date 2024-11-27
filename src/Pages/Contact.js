@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import '../Style/contact.css'
 import { useForm } from 'react-hook-form'
+import sendEmail from '../Services/sendEmail'
 
 const Contact = () => {
 
@@ -9,6 +10,7 @@ const Contact = () => {
 
     const onSubmit = (res) => {
         console.log(res)
+        sendEmail(res)
     }
 
 
